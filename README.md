@@ -4,3 +4,4 @@
 * 8:40: work on capstone-proposal
 * 9:20: continue work on capstone-proposal
 * 10:00 brainstorm features and fill out proposal
+* 11: 00 research REACT tutorials on YouTube
