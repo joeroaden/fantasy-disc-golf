@@ -22,7 +22,7 @@
 
 ## Scoring System
 | Place | MPO | FPO | 
-| :---: | :---: | :---: | :---: | --- |
-| name | string | none | true | Return matches by name.
-| species| string | none | true | Return search by species.
-| minumumAge | int | none | true | Return matches by minimum age.
+| :---: | :---: | :---: | 
+| 1 | 250 | 250 | 
+| 2| 225 | 230 | 
+| 3 | 220 | 210 | 
