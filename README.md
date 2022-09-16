@@ -11,6 +11,8 @@
 * 1:45: start table to map out points for scoring system
 * 2:45: finish scoring system diagram 
 * 3:20: Correct typos on scoring table
+* 3:45: Begin watching REACT Native Tutorial
+
 
 
 
