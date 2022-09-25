@@ -14,6 +14,15 @@
 * 3:45: Begin watching REACT Native Tutorial
 * 4:45: Continue working REACT Native Tutorial
 
+#### Friday, 9/23
+* 8:00: Shortened MVP and moved more items into stretch and further exploration
+* 9:00: Correct Capstone Proposal per Feedback - submitted correction in Epicenter
+
+#### Sunday, 9/25
+* 7:00 am: Create React App Scaffolding for project files
+* 8:00 am: Add senstive files to .gitignore
+
+
 
 
 
