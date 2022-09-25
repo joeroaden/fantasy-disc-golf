@@ -6,7 +6,7 @@ import NewFantasyForm from "./NewFantasyForm";
 import FantasyDetail from "./FantasyDetail";
 import EditFantasyForm from "./EditFantasyForm.js";
 import MyFantasyList from "./MyFantasyList.js";
-// import AnswerKey from "./AnswerKey.js"; this may be where your team lives
+import MyTeam from "./MyTeam.js"; 
 import * as css from '../StyleComponents'
 
 function FantasyControl() {
