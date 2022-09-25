@@ -21,6 +21,7 @@
 #### Sunday, 9/25
 * 7:00 am: Create React App Scaffolding for project files
 * 8:00 am: Add senstive files to .gitignore
+* 9:45 am: See Commits in GitHub - Multiple project file updates
 
 
 
