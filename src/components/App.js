@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import GolfControl from './GolfControl';
+import FantasyControl from './FantasyControl';
 import SignIn from './SignIn';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
@@ -16,7 +16,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/sign-in' element={<SignIn/>}/>
-          <Route path='/' element={<GolfControl/>}/>       
+          <Route path='/' element={<FantasyControl/>}/>       
         </Routes>
       </Router>
     </StyledWrapper>
