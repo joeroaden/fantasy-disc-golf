@@ -26,6 +26,11 @@
 * 9:00 pm: Continue watching REACT Tutorial
 * 10:00 pm: Working through REACT Tutorial
 
+#### Monday, 9/26
+* 5:30 am: Set up Firebase Project Files
+
+
+
 
 
 
