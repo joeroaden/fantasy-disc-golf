@@ -21,10 +21,6 @@ function ReusableForm(props) {
           name='date'
           placeholder='Date of event' />
           <br></br>
-        <input
-          type="url"
-          name='website'
-          placeholder='Event Website' />
           <br></br>
         <css.Button type='submit'>{props.buttonText}</css.Button>
       </form>

@@ -12,7 +12,6 @@ function NewFantasyForm(props){
       name: event.target.name.value,
       location: event.target.location.value,
       date: event.target.date.value,
-      website: event.target.website.value,
       creator: auth.currentUser.email,
       id: v4()
     });
