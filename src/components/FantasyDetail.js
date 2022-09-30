@@ -47,14 +47,14 @@ function FantasyDetail(props){
   }
   
 
-  // function handleNewPlayerFormSubmission(event) {
-  //   event.preventDefault();
-  //   props.onNewAnswerCreation({
-  //     player1: event.target.player1.value,
-  //     // setOptionValue(event.target.value);
-  //     fantasyId: fantasy.id
-  //   });
-  // }
+  function handleNewPlayerFormSubmission(event) {
+    event.preventDefault();
+    props.onNewAnswerCreation({
+      player1: event.target.player1.value,
+      // setOptionValue(event.target.value);
+      fantasyId: fantasy.id
+    });
+  }
 
   // if(auth.currentUser.email === fantasy.creator){
     showButtons = 
@@ -69,6 +69,7 @@ function FantasyDetail(props){
     <React.Fragment>
       <h1>{fantasy.name}</h1>
       <a href="https://www.pdga.com/tour/event/55454">PDGA Event Page</a>
+      <form onSubmit={handleNewPlayerFormSubmission}>
       <Dropdown
         formLabel="Choose Player 1"
         // buttonText="Select Player"
@@ -559,11 +560,14 @@ function FantasyDetail(props){
         <Option value="Brandon Holsworth	-	990" />
       </Dropdown>
       <p>You selected {optionValue} {optionValue2} </p>
+      <css.Button type='submit'>Submit your Team!</css.Button>
+      </form>
       {/* {answerList} */}
       {showButtons}
     </React.Fragment>
   );
 }
+// console.log(player1);
 
 FantasyDetail.propTypes = {
   fantasy: PropTypes.object,
