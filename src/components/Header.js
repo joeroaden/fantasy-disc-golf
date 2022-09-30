@@ -10,7 +10,7 @@ const FantasyHeader = styled.h1`
 `;
 
 const StyledWrapper = styled.section`
-  background-color: rgb(130, 180, 255);
+  background-color: rgb(0,204,102);
   font-weight: bold;
   display: flex;
   flex-direction: column;
