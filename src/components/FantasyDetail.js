@@ -3,14 +3,21 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import PropTypes from "prop-types";
 import { db, auth } from "./../firebase.js"; //removed db
 import { v4 } from 'uuid';
+import { Dropdown, Option } from "./Dropdown";
 import * as css from '../StyleComponents'
 
 function FantasyDetail(props){
   const { fantasy, onClickingDelete, onClickingEdit } = props; 
-  const [answerList, setAnswerList] = useState(null);
+  const [playerList, setPlayerList] = useState(null);
+  const [optionValue, setOptionValue] = useState("");
+  const handleSelect = (e) => {
+    console.log(e.target.value);
+    setOptionValue(e.target.value);
+  }
+  
   let showButtons = null;
 
-  const getAnswers = async () => {
+  const getPlayers = async () => {
     const q = query(collection(db, "fantasy"), where("fantasyId", "==", fantasy.id))
     const querySnapshot = await getDocs(q);
 
@@ -18,27 +25,26 @@ function FantasyDetail(props){
       console.log(doc.id, " => ", doc.data());
     });
 
-    let newAnswerList = [];
+    let newPlayerList = [];
     querySnapshot.forEach((doc) => {
-      newAnswerList.push(
+      newPlayerList.push(
       <ol>
-        <li key={v4()}>{doc.data().answer1}</li>
+        <li key={v4()}>{doc.data().player1}</li>
         <li key={v4()}>{doc.data().answer2}</li>
         <li key={v4()}>{doc.data().answer3}</li>
       </ol>
       )
     })
-    setAnswerList(newAnswerList);
-    console.log(answerList);
+    setPlayerList(newPlayerList);
+    console.log(playerList);
   }
   
 
   function handleNewPicksFormSubmission(event) {
     event.preventDefault();
     props.onNewAnswerCreation({
-      answer1: event.target.answer1.value,
-      answer2: event.target.answer2.value,
-      answer3: event.target.answer3.value,
+      player1: event.target.player1.value,
+      // setOptionValue(event.target.value);
       fantasyId: fantasy.id
     });
   }
@@ -48,7 +54,7 @@ function FantasyDetail(props){
     <>
       <css.Button onClick={onClickingEdit}>Update Event</css.Button>
       <css.Button onClick={()=> onClickingDelete(fantasy.id)}>Delete Event</css.Button>
-      <css.Button onClick={getAnswers}>Show Picks</css.Button>
+      <css.Button onClick={getPlayers}>Show Picks</css.Button>
     </>
   // }
 
@@ -56,15 +62,20 @@ function FantasyDetail(props){
     <React.Fragment>
       <h1>{fantasy.name}</h1>
       <h2>{fantasy.website}</h2>
-      <form onSubmit={handleNewPicksFormSubmission}>
-        <h4>Choose your Team!</h4>
-        <Dropdown></Dropdown>
-        formLabel="Choose your players">
-       <Option selected value="player 1">Click to see Options/>
-       </Dropdown>
-        <css.Button type='submit'>Submit your Picks!</css.Button>
-      </form>
+      <Dropdown
+        formLabel="Choose a player"
+        buttonText="Send form"
+        onChange={handleSelect}
+        action="https://jsonplaceholder.typicode.com/posts"
+      >
+        <Option selected value="Click to see options" />
+        <Option value="Option 1" />
+        <Option value="Option 2" />
+        <Option value="Option 3" />
+      </Dropdown>
+      <p>You selected {optionValue} </p>
       <hr/>
+      
       {/* {answerList} */}
       {showButtons}
     </React.Fragment>
