@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import PropTypes from "prop-types";
-import { db, auth } from "./../firebase.js";
+import { db, auth } from "./../firebase.js"; //removed db
 import { v4 } from 'uuid';
 import * as css from '../StyleComponents'
 
 function FantasyDetail(props){
-  const { fantasy, onClickingDelete, onClickingEdit } = props; 
+  const { fantasy, events, onClickingDelete, onClickingEdit } = props; 
   const [answerList, setAnswerList] = useState(null);
   let showButtons = null;
 
   const getAnswers = async () => {
-    const q = query(collection(db, "answers"), where("fantasyId", "==", fantasy.id))
+    const q = query(collection(db, "events"), where("eventId", "==", events.id))
     const querySnapshot = await getDocs(q);
 
     querySnapshot.forEach((doc) => {
@@ -31,8 +31,9 @@ function FantasyDetail(props){
     setAnswerList(newAnswerList);
     console.log(answerList);
   }
+  
 
-  function handleNewAnswerFormSubmission(event) {
+  function handleNewPicksFormSubmission(event) {
     event.preventDefault();
     props.onNewAnswerCreation({
       answer1: event.target.answer1.value,
@@ -42,38 +43,29 @@ function FantasyDetail(props){
     });
   }
 
-  if(auth.currentUser.email === fantasy.creator){
+  // if(auth.currentUser.email === fantasy.creator){
     showButtons = 
     <>
       <css.Button onClick={onClickingEdit}>Update Event</css.Button>
       <css.Button onClick={()=> onClickingDelete(fantasy.id)}>Delete Event</css.Button>
       <css.Button onClick={getAnswers}>Show Picks</css.Button>
     </>
-  }
+  // }
 
   return (
     <React.Fragment>
-      <h1>{fantasy.name}</h1>
-      <form onSubmit={handleNewAnswerFormSubmission}>
-        <h2>{fantasy.question1}</h2>
-        <input
-          type='text'
-          name='answer1'
-          placeholder='Answer' />
-        <h2>{fantasy.question2}</h2>
-        <input
-          type='text'
-          name='answer2'
-          placeholder='Answer' />
-        <h2>{fantasy.question3}</h2>
-        <input
-          type='text'
-          name='answer3'
-          placeholder='Answer' />
+      <h1>{events.name}</h1>
+      <h2>{events.website}</h2>
+      <form onSubmit={handleNewPicksFormSubmission}>
+        <h4>Choose your Team!</h4>
+        <select name="selectList" id="selectList">
+          <option value="player 1">Option 1</option>
+          <option value="player 2">Option 2</option>
+</select>
         <css.Button type='submit'>Submit your Picks!</css.Button>
       </form>
       <hr/>
-      {answerList}
+      {/* {answerList} */}
       {showButtons}
     </React.Fragment>
   );

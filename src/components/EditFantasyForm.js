@@ -11,11 +11,8 @@ function EditFantasyForm(props){
     props.onEditFantasy({
       name: event.target.name.value,
       location: event.target.location.value,
-      question2: event.target.question2.value,
-      question3: event.target.question3.value,
-      answer1: event.target.answer1.value,
-      answer2: event.target.answer2.value,
-      answer3: event.target.answer3.value,
+      date: event.target.date.value,
+      website: event.target.website.value,
       id: fantasy.id
     });
   }

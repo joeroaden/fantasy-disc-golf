@@ -6,7 +6,10 @@ function Fantasy(props){
   return (
   <React.Fragment>
       <div onClick = {() => props.whenFantasyClicked(props.id)}>
-        <h2>{props.name}</h2>
+        <h1>{props.name}</h1>
+        <h2>{props.location}</h2>
+        <h3>{props.date}</h3>
+        <h4>{props.website}</h4>
         <hr/>
       </div>
     </React.Fragment>
@@ -15,6 +18,9 @@ function Fantasy(props){
 
 Fantasy.propTypes = {
   name: PropTypes.string,
+  location: PropTypes.string,
+  date: PropTypes.string,
+  website: PropTypes.string,
   id: PropTypes.string,
   whenFantasyClicked: PropTypes.func
 }

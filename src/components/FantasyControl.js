@@ -20,16 +20,16 @@ function FantasyControl() {
 
   useEffect(() => {
     const unSubscribe = onSnapshot(
-      collection(db, "fantasies"),
+      collection(db, "events"),
       (collectionSnapshot) => {
-        const fantasies = [];
+        const events = [];
         collectionSnapshot.forEach((doc) => {
-          fantasies.push({
+          events.push({
             ...doc.data(),
             id: doc.id
           });
         });
-        setMainFantasyList(fantasies);
+        setMainFantasyList(events);
       },
       (error) => {
         setError(error.message);

@@ -24,6 +24,7 @@ function FantasyList(props){
           name={fantasy.name}
           location={fantasy.location}
           date={fantasy.date}
+          website={fantasy.website}
           id={fantasy.id}
           key={fantasy.id}/>
       )}

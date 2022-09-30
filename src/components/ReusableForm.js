@@ -9,12 +9,12 @@ function ReusableForm(props) {
         <input
           type='text'
           name='name'
-          placeholder='Enter name of event' />   
+          placeholder='Name of event' />   
           <br></br>
         <input
           type='text'
           name='location'
-          placeholder='Enter Location of Event' />
+          placeholder='Location of Event' />
           <br></br>
         <input
           type='text'
@@ -22,22 +22,10 @@ function ReusableForm(props) {
           placeholder='Date of event' />
           <br></br>
         <input
-          type='url'
+          type="url"
           name='website'
-          placeholder='Enter URL for Event' />
+          placeholder='Event Website' />
           <br></br>
-        <input
-          type='text'
-          name='answer2'
-          placeholder='Answer 2' />
-        <input
-          type='text'
-          name='question3'
-          placeholder='Question 3' />
-        <input
-          type='text'
-          name='answer3'
-          placeholder='Answer 3' />
         <css.Button type='submit'>{props.buttonText}</css.Button>
       </form>
     </React.Fragment>
