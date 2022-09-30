@@ -40,7 +40,7 @@ function FantasyDetail(props){
   }
   
 
-  function handleNewPicksFormSubmission(event) {
+  function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
     props.onNewAnswerCreation({
       player1: event.target.player1.value,
@@ -64,18 +64,18 @@ function FantasyDetail(props){
       <h2>{fantasy.website}</h2>
       <Dropdown
         formLabel="Choose a player"
-        buttonText="Send form"
-        onChange={handleSelect}
+        buttonText="Se"
+        onChange={handleNewPlayerFormSubmission}
         action="https://jsonplaceholder.typicode.com/posts"
       >
-        <Option selected value="Click to see options" />
-        <Option value="Option 1" />
+        <Option selected value="Click to see available players" />
+        <Option value="Paul McBeth - 27523 - 1049" />
         <Option value="Option 2" />
         <Option value="Option 3" />
       </Dropdown>
       <p>You selected {optionValue} </p>
       <hr/>
-      
+
       {/* {answerList} */}
       {showButtons}
     </React.Fragment>
