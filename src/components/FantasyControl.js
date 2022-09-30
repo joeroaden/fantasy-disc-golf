@@ -6,7 +6,7 @@ import NewFantasyForm from "./NewFantasyForm";
 import FantasyDetail from "./FantasyDetail";
 import EditFantasyForm from "./EditFantasyForm.js";
 import MyFantasyList from "./MyFantasyList.js";
-import MyTeam from "./MyTeam.js"; 
+// import MyTeam from "./MyTeam.js"; 
 import * as css from '../StyleComponents'
 
 function FantasyControl() {
@@ -14,7 +14,7 @@ function FantasyControl() {
   const [mainFantasyList, setMainFantasyList] = useState([]);
   const [error, setError] = useState(null);
   const [selectedFantasy, setSelectedFantasy] = useState(null);
-  const [currentAnswer, setCurrentAnswer] = useState(null);
+  // const [currentAnswer, setCurrentAnswer] = useState(null);
   const [editing, setEditing] = useState(false);
   const [viewMyFantasyList, setViewMyFantasyList] = useState(false);
 
@@ -42,7 +42,7 @@ function FantasyControl() {
     setFormVisibleOnPage(!formVisibleOnPage);
     if (selectedFantasy != null) {
       setFormVisibleOnPage(false);
-      setCurrentAnswer(null);
+      // setCurrentAnswer(null);
       setSelectedFantasy(null);
       setEditing(false);
     } else {
@@ -64,7 +64,7 @@ function FantasyControl() {
   const handleAddingNewAnswerToList = async (newAnswerData) => {
     const collectionRef = collection(db, "answers");
     await addDoc(collectionRef, newAnswerData);
-    setCurrentAnswer(newAnswerData);
+    // setCurrentAnswer(newAnswerData);
     setFormVisibleOnPage(false);
     // logic to show a component that has the correct answers for the Fantasy you just took, and shows your answers alongside them.
   }
@@ -92,7 +92,7 @@ function FantasyControl() {
   if (auth.currentUser == null) {
     return (
       <React.Fragment>
-        <h1>You must be signed in to access Fantasyzes</h1>
+        <h1>You must be signed in to access Events</h1>
       </React.Fragment>
     )
   } else if (auth.currentUser != null) {
@@ -103,9 +103,9 @@ function FantasyControl() {
     
     if (error) {
       currentlyVisibleState = <p>There was an error: {error}</p>
-    } else if (currentAnswer != null){
-      currentlyVisibleState = <AnswerKey answer={currentAnswer} Fantasy={selectedFantasy} />;
-      buttonText = "Return to Fantasy List";
+    // } else if (currentAnswer != null){
+    //   currentlyVisibleState = <AnswerKey answer={currentAnswer} Fantasy={selectedFantasy} />;
+    //   buttonText = "Return to Fantasy List";
     } else if (editing) {      
       currentlyVisibleState = <EditFantasyForm Fantasy={selectedFantasy} onEditFantasy={handleEditingFantasyInList} />
       buttonText = "Return to Fantasy List";

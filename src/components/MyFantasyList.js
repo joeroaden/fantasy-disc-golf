@@ -1,30 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { auth } from "./../firebase.js";
-import Quiz from "./Quiz.js";
+import Fantasy from "./Fantasy.js";
 import * as css from '../StyleComponents';
 
-function MyQuizList(props) {
-  const myQuizList = props.quizList.filter(quiz => auth.currentUser.email === quiz.creator);
+function MyFantasyList(props) {
+  const myFantasyList = props.fantasyList.filter(fantasy => auth.currentUser.email === fantasy.creator);
 
   return(
     <React.Fragment>
       <hr/>
-      {myQuizList.map((quiz) => 
-        <Quiz 
-          whenQuizClicked={props.onQuizSelection}
-          name={quiz.name}
-          id={quiz.id}
-          key={quiz.id}/>
+      {myFantasyList.map((fantasy) => 
+        <Fantasy 
+          whenFantasyClicked={props.onFantasySelection}
+          name={fantasy.name}
+          id={fantasy.id}
+          key={fantasy.id}/>
       )}
-      <css.Button onClick={props.changeVisibleList}>View all quizzes</css.Button>
+      <css.Button onClick={props.changeVisibleList}>View All Events</css.Button>
     </React.Fragment>
   );
 }
 
-MyQuizList.propTypes = {
-  quizList: PropTypes.array,
-  onQuizSelection: PropTypes.func,
+MyFantasyList.propTypes = {
+  fantasyList: PropTypes.array,
+  onFantasySelection: PropTypes.func,
 };
 
-export default MyQuizList;
+export default MyFantasyList;
