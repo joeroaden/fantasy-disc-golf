@@ -54,8 +54,8 @@ function FantasyDetail(props){
 
   return (
     <React.Fragment>
-      <h1>{events.name}</h1>
-      <h2>{events.website}</h2>
+      <h1>{fantasy.name}</h1>
+      <h2>{fantasy.website}</h2>
       <form onSubmit={handleNewPicksFormSubmission}>
         <h4>Choose your Team!</h4>
         <select name="selectList" id="selectList">
