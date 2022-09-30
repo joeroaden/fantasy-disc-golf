@@ -20,16 +20,16 @@ function FantasyControl() {
 
   useEffect(() => {
     const unSubscribe = onSnapshot(
-      collection(db, "Fantasyzes"),
+      collection(db, "fantasies"),
       (collectionSnapshot) => {
-        const Fantasyzes = [];
+        const fantasies = [];
         collectionSnapshot.forEach((doc) => {
-          Fantasyzes.push({
+          fantasies.push({
             ...doc.data(),
             id: doc.id
           });
         });
-        setMainFantasyList(Fantasyzes);
+        setMainFantasyList(fantasies);
       },
       (error) => {
         setError(error.message);
@@ -51,13 +51,13 @@ function FantasyControl() {
   }
 
   const handleAddingNewFantasyToList = async (newFantasyData) => {
-    const collectionRef = collection(db, "Fantasyzes");
+    const collectionRef = collection(db, "events");
     await addDoc(collectionRef, newFantasyData);
     setFormVisibleOnPage(false);
   }
 
   const handleChangingSelectedFantasy = (id) => {
-    const selection = mainFantasyList.filter(Fantasy => Fantasy.id === id)[0];
+    const selection = mainFantasyList.filter(fantasy => fantasy.id === id)[0];
     setSelectedFantasy(selection);
   }
 
@@ -70,12 +70,12 @@ function FantasyControl() {
   }
 
   const handleDeletingFantasy = async (id) => {
-    await deleteDoc(doc(db, "Fantasyzes", id));
+    await deleteDoc(doc(db, "events", id));
     setSelectedFantasy(null);
   }
 
   const handleEditingFantasyInList = async (FantasyToEdit) => {
-    const FantasyRef = doc(db, "Fantasyzes", FantasyToEdit.id);
+    const FantasyRef = doc(db, "events", FantasyToEdit.id);
     await updateDoc(FantasyRef, FantasyToEdit);
     setEditing(false);
     setSelectedFantasy(null);
@@ -121,10 +121,10 @@ function FantasyControl() {
       buttonText = "Return to Fantasy List"; 
     } else if (viewMyFantasyList){
       currentlyVisibleState = <MyFantasyList onFantasySelection={handleChangingSelectedFantasy} FantasyList={mainFantasyList} changeVisibleList={handleChangingFantasyList}/>;
-      buttonText = "Add Fantasy";
+      buttonText = "Add Event";
     } else {
-      currentlyVisibleState = <FantasyList onFantasySelection={handleChangingSelectedFantasy} FantasyList={mainFantasyList} changeVisibleList={handleChangingFantasyList}/>;
-      buttonText = "Add Fantasy"; 
+      currentlyVisibleState = <FantasyList onFantasySelection={handleChangingSelectedFantasy} fantasyList={mainFantasyList} changeVisibleList={handleChangingFantasyList}/>;
+      buttonText = "Add Event"; 
     }
   
     return (
