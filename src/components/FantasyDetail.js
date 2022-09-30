@@ -6,12 +6,12 @@ import { v4 } from 'uuid';
 import * as css from '../StyleComponents'
 
 function FantasyDetail(props){
-  const { fantasy, events, onClickingDelete, onClickingEdit } = props; 
+  const { fantasy, onClickingDelete, onClickingEdit } = props; 
   const [answerList, setAnswerList] = useState(null);
   let showButtons = null;
 
   const getAnswers = async () => {
-    const q = query(collection(db, "events"), where("eventId", "==", events.id))
+    const q = query(collection(db, "fantasy"), where("fantasyId", "==", fantasy.id))
     const querySnapshot = await getDocs(q);
 
     querySnapshot.forEach((doc) => {
@@ -58,10 +58,10 @@ function FantasyDetail(props){
       <h2>{fantasy.website}</h2>
       <form onSubmit={handleNewPicksFormSubmission}>
         <h4>Choose your Team!</h4>
-        <select name="selectList" id="selectList">
-          <option value="player 1">Option 1</option>
-          <option value="player 2">Option 2</option>
-</select>
+        <Dropdown></Dropdown>
+        formLabel="Choose your players">
+       <Option selected value="player 1">Click to see Options/>
+       </Dropdown>
         <css.Button type='submit'>Submit your Picks!</css.Button>
       </form>
       <hr/>

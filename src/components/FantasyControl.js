@@ -107,11 +107,11 @@ function FantasyControl() {
     //   currentlyVisibleState = <AnswerKey answer={currentAnswer} Fantasy={selectedFantasy} />;
     //   buttonText = "Return to Fantasy List";
     } else if (editing) {      
-      currentlyVisibleState = <EditFantasyForm Fantasy={selectedFantasy} onEditFantasy={handleEditingFantasyInList} />
+      currentlyVisibleState = <EditFantasyForm fantasy={selectedFantasy} onEditFantasy={handleEditingFantasyInList} />
       buttonText = "Return to Fantasy List";
     } else if (selectedFantasy != null) {
       currentlyVisibleState= <FantasyDetail
-      Fantasy={selectedFantasy} 
+      fantasy={selectedFantasy} 
       onClickingDelete={handleDeletingFantasy}
       onClickingEdit = {handleEditClick} 
       onNewAnswerCreation = {handleAddingNewAnswerToList} />
