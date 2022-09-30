@@ -22,6 +22,8 @@ function FantasyList(props){
         <Fantasy 
           whenFantasyClicked={props.onFantasySelection}
           name={fantasy.name}
+          location={fantasy.location}
+          date={fantasy.date}
           id={fantasy.id}
           key={fantasy.id}/>
       )}

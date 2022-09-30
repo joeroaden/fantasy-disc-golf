@@ -10,7 +10,7 @@ function EditFantasyForm(props){
     event.preventDefault();
     props.onEditFantasy({
       name: event.target.name.value,
-      question1: event.target.question1.value,
+      location: event.target.location.value,
       question2: event.target.question2.value,
       question3: event.target.question3.value,
       answer1: event.target.answer1.value,

@@ -9,19 +9,23 @@ function ReusableForm(props) {
         <input
           type='text'
           name='name'
-          placeholder='Enter name of quiz' />   
+          placeholder='Enter name of event' />   
+          <br></br>
         <input
           type='text'
-          name='question1'
-          placeholder='Question 1' />
+          name='location'
+          placeholder='Enter Location of Event' />
+          <br></br>
         <input
           type='text'
-          name='answer1'
-          placeholder='Answer 1' />
+          name='date'
+          placeholder='Date of event' />
+          <br></br>
         <input
-          type='text'
-          name='question2'
-          placeholder='Question 2' />
+          type='url'
+          name='website'
+          placeholder='Enter URL for Event' />
+          <br></br>
         <input
           type='text'
           name='answer2'
