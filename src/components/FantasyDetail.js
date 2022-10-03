@@ -42,7 +42,7 @@ function FantasyDetail(props){
   let showButtons = null;
 
   const getPlayers = async () => {
-    const q = query(collection(db, "events"), where("eventId", "==", fantasy.id))
+    const q = query(collection(db, "player"), where("eventsId", "==", fantasy.id))
     const querySnapshot = await getDocs(q);
 
     querySnapshot.forEach((doc) => {
