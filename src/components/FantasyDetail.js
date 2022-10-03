@@ -42,7 +42,7 @@ function FantasyDetail(props){
   let showButtons = null;
 
   const getPlayers = async () => {
-    const q = query(collection(db, "fantasy"), where("fantasyId", "==", fantasy.id))
+    const q = query(collection(db, "events"), where("eventId", "==", fantasy.id))
     const querySnapshot = await getDocs(q);
 
     querySnapshot.forEach((doc) => {
@@ -64,10 +64,11 @@ function FantasyDetail(props){
     setPlayerList(newPlayerList);
     console.log(playerList);
   }
-  
+  let player1 = null;
 
   function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
+    console.log({player1})
     props.onNewPlayerCreation({
       player1: event.target.player1.value,
       player2: event.target.player1.value,
@@ -197,7 +198,7 @@ function FantasyDetail(props){
         name="player2"
         // buttonText="Select Player"
         onChange={handleSelect2}
-        action="https://jsonplaceholder.typicode.com/posts"
+        // action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
         <Option value="Paul McBeth - 1049" />
@@ -296,7 +297,7 @@ function FantasyDetail(props){
         name="player3"
         // buttonText="Select Player"
         onChange={handleSelect3}
-        action="https://jsonplaceholder.typicode.com/posts"
+        // action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
         <Option value="Paul McBeth - 1049" />
@@ -395,7 +396,7 @@ function FantasyDetail(props){
         name="player4"
         // buttonText="Select Player"
         onChange={handleSelect4}
-        action="https://jsonplaceholder.typicode.com/posts"
+        // action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
         <Option value="Paul McBeth - 1049" />
@@ -494,7 +495,7 @@ function FantasyDetail(props){
         name="player5"
         // buttonText="Select Player"
         onChange={handleSelect5}
-        action="https://jsonplaceholder.typicode.com/posts"
+        // action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
         <Option value="Paul McBeth - 1049" />
