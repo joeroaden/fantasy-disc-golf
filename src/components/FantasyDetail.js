@@ -49,7 +49,7 @@ function FantasyDetail(props){
 
   function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
-    props.onNewAnswerCreation({
+    props.onNewPlayerCreation({
       player1: event.target.player1.value,
       // setOptionValue(event.target.value);
       fantasyId: fantasy.id
@@ -72,6 +72,7 @@ function FantasyDetail(props){
       <form onSubmit={handleNewPlayerFormSubmission}>
       <Dropdown
         formLabel="Choose Player 1"
+        name="player1"
         // buttonText="Select Player"
         onChange={handleSelect}
         // action="https://jsonplaceholder.typicode.com/posts"
@@ -171,7 +172,7 @@ function FantasyDetail(props){
       <Dropdown
         formLabel="Choose Player 2"
         // buttonText="Select Player"
-        onChange={handleSelect}
+        onChange={handleSelect2}
         action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />

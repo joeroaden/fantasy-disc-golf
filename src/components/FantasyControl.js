@@ -61,8 +61,8 @@ function FantasyControl() {
     setSelectedFantasy(selection);
   }
 
-  const handleAddingNewAnswerToList = async (newAnswerData) => {
-    const collectionRef = collection(db, "answers");
+  const handleAddingNewPlayerToList = async (newAnswerData) => {
+    const collectionRef = collection(db, "players");
     await addDoc(collectionRef, newAnswerData);
     // setCurrentAnswer(newAnswerData);
     setFormVisibleOnPage(false);
@@ -114,7 +114,7 @@ function FantasyControl() {
       fantasy={selectedFantasy} 
       onClickingDelete={handleDeletingFantasy}
       onClickingEdit = {handleEditClick} 
-      onNewAnswerCreation = {handleAddingNewAnswerToList} />
+      onNewPlayerCreation = {handleAddingNewPlayerToList} />
       buttonText = "Return to Fantasy List";
     } else if (formVisibleOnPage) {
       currentlyVisibleState = <NewFantasyForm onNewFantasyCreation={handleAddingNewFantasyToList}/>;
