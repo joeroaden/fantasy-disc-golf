@@ -95,7 +95,7 @@ function FantasyDetail(props){
       <form onSubmit={handleNewPlayerFormSubmission}>
       <Dropdown
         formLabel="Choose Player 1"
-        id="player1"
+        name="player1"
         // buttonText="Select Player"
         onChange={handleSelect}
         // action="https://jsonplaceholder.typicode.com/posts"
