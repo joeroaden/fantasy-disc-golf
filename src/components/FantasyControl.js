@@ -14,7 +14,7 @@ function FantasyControl() {
   const [mainFantasyList, setMainFantasyList] = useState([]);
   const [error, setError] = useState(null);
   const [selectedFantasy, setSelectedFantasy] = useState(null);
-  // const [currentAnswer, setCurrentAnswer] = useState(null);
+  const [currentPlayer, setCurrentPlayer] = useState(null);
   const [editing, setEditing] = useState(false);
   const [viewMyFantasyList, setViewMyFantasyList] = useState(false);
 
@@ -42,7 +42,7 @@ function FantasyControl() {
     setFormVisibleOnPage(!formVisibleOnPage);
     if (selectedFantasy != null) {
       setFormVisibleOnPage(false);
-      // setCurrentAnswer(null);
+      setCurrentPlayer(null);
       setSelectedFantasy(null);
       setEditing(false);
     } else {
@@ -61,10 +61,10 @@ function FantasyControl() {
     setSelectedFantasy(selection);
   }
 
-  const handleAddingNewPlayerToList = async (newAnswerData) => {
+  const handleAddingNewPlayerToList = async (newFantasyData) => {
     const collectionRef = collection(db, "players");
-    await addDoc(collectionRef, newAnswerData);
-    // setCurrentAnswer(newAnswerData);
+    await addDoc(collectionRef, newFantasyData);
+    setCurrentPlayer(newFantasyData);
     setFormVisibleOnPage(false);
     // logic to show a component that has the correct answers for the Fantasy you just took, and shows your answers alongside them.
   }

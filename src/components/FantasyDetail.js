@@ -80,14 +80,14 @@ function FantasyDetail(props){
     });
   }
 
-  // if(auth.currentUser.email === fantasy.creator){
+  if(auth.currentUser.email === fantasy.creator){
     showButtons = 
     <>
       <css.Button onClick={onClickingEdit}>Update Event</css.Button>
       <css.Button onClick={()=> onClickingDelete(fantasy.id)}>Delete Event</css.Button>
       <css.Button onClick={getPlayers}>Show Picks</css.Button>
     </>
-  // }
+  }
 
   return (
     <React.Fragment>
