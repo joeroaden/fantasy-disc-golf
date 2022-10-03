@@ -11,13 +11,31 @@ function FantasyDetail(props){
   const [playerList, setPlayerList] = useState(null);
   const [optionValue, setOptionValue] = useState("");
   const [optionValue2, setOptionValue2] = useState("");
+  const [optionValue3, setOptionValue3] = useState("");
+  const [optionValue4, setOptionValue4] = useState("");
+  const [optionValue5, setOptionValue5] = useState("");
+
+
+
   const handleSelect = (e) => {
     console.log(e.target.value);
     setOptionValue(e.target.value);
   }
   const handleSelect2 = (e) => {
-    console.log(e.target.value2);
-    setOptionValue2(e.target.value2);
+    console.log(e.target.value);
+    setOptionValue2(e.target.value);
+  }
+  const handleSelect3 = (e) => {
+    console.log(e.target.value);
+    setOptionValue3(e.target.value);
+  }
+  const handleSelect4 = (e) => {
+    console.log(e.target.value);
+    setOptionValue4(e.target.value);
+  }
+  const handleSelect5 = (e) => {
+    console.log(e.target.value);
+    setOptionValue5(e.target.value);
   }
   
   let showButtons = null;
@@ -270,7 +288,7 @@ function FantasyDetail(props){
       <Dropdown
         formLabel="Choose Player 3"
         // buttonText="Select Player"
-        onChange={handleSelect}
+        onChange={handleSelect3}
         action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
@@ -368,7 +386,7 @@ function FantasyDetail(props){
       <Dropdown
         formLabel="Choose Player 4"
         // buttonText="Select Player"
-        onChange={handleSelect}
+        onChange={handleSelect4}
         action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
@@ -466,7 +484,7 @@ function FantasyDetail(props){
       <Dropdown
         formLabel="Choose Player 5"
         // buttonText="Select Player"
-        onChange={handleSelect}
+        onChange={handleSelect5}
         action="https://jsonplaceholder.typicode.com/posts"
       >
         <Option selected value="Click to see available players" />
