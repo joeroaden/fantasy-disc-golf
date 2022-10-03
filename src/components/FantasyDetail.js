@@ -21,6 +21,7 @@ function FantasyDetail(props){
     console.log(e.target.value);
     setOptionValue(e.target.value);
   }
+  
   const handleSelect2 = (e) => {
     console.log(e.target.value);
     setOptionValue2(e.target.value);
@@ -69,6 +70,10 @@ function FantasyDetail(props){
     event.preventDefault();
     props.onNewPlayerCreation({
       player1: event.target.player1.value,
+      player2: event.target.player1.value,
+      player3: event.target.player1.value,
+      player4: event.target.player1.value,
+      player5: event.target.player1.value,
       // setOptionValue(event.target.value);
       fantasyId: fantasy.id
     });
@@ -90,7 +95,7 @@ function FantasyDetail(props){
       <form onSubmit={handleNewPlayerFormSubmission}>
       <Dropdown
         formLabel="Choose Player 1"
-        name="player1"
+        id="player1"
         // buttonText="Select Player"
         onChange={handleSelect}
         // action="https://jsonplaceholder.typicode.com/posts"
@@ -189,6 +194,7 @@ function FantasyDetail(props){
       <hr/>
       <Dropdown
         formLabel="Choose Player 2"
+        name="player2"
         // buttonText="Select Player"
         onChange={handleSelect2}
         action="https://jsonplaceholder.typicode.com/posts"
@@ -287,6 +293,7 @@ function FantasyDetail(props){
       <hr></hr>
       <Dropdown
         formLabel="Choose Player 3"
+        name="player3"
         // buttonText="Select Player"
         onChange={handleSelect3}
         action="https://jsonplaceholder.typicode.com/posts"
@@ -385,6 +392,7 @@ function FantasyDetail(props){
       <hr></hr>
       <Dropdown
         formLabel="Choose Player 4"
+        name="player4"
         // buttonText="Select Player"
         onChange={handleSelect4}
         action="https://jsonplaceholder.typicode.com/posts"
@@ -483,6 +491,7 @@ function FantasyDetail(props){
       <hr></hr>
       <Dropdown
         formLabel="Choose Player 5"
+        name="player5"
         // buttonText="Select Player"
         onChange={handleSelect5}
         action="https://jsonplaceholder.typicode.com/posts"
@@ -578,7 +587,17 @@ function FantasyDetail(props){
         <Option value="Ilkin Groh	-	990" />
         <Option value="Brandon Holsworth	-	990" />
       </Dropdown>
-      <p>You selected {optionValue} {optionValue2} </p>
+      <p>You selected :
+      <br></br>
+      {optionValue} 
+      <br></br>
+      {optionValue2} 
+      <br></br>
+      {optionValue3}
+      <br></br>
+      {optionValue4}
+      <br></br>
+      {optionValue5} </p>
       <css.Button type='submit'>Submit your Team!</css.Button>
       </form>
       {/* {answerList} */}

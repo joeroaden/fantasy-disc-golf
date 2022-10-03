@@ -13,6 +13,11 @@ function NewFantasyForm(props){
       location: event.target.location.value,
       date: event.target.date.value,
       creator: auth.currentUser.email,
+      player1: event.target.player1.value,
+      player2: event.target.player2.value,
+      player3: event.target.player3.value,
+      player4: event.target.player4.value,
+      player5: event.target.player5.value,
       id: v4()
     });
   }
