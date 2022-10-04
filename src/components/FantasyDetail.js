@@ -6,6 +6,7 @@ import { v4 } from 'uuid';
 import { Dropdown, Option } from "./Dropdown";
 import * as css from '../StyleComponents'
 
+
 function FantasyDetail(props){
   const { fantasy, onClickingDelete, onClickingEdit } = props; 
   const [playerList, setPlayerList] = useState(null);
@@ -15,9 +16,7 @@ function FantasyDetail(props){
   const [optionValue4, setOptionValue4] = useState("");
   const [optionValue5, setOptionValue5] = useState("");
 
-  const bodyStyle = {
-    backgroundColor: 'light-gray'
-  }
+  
 
   const handleSelect = (e) => {
     console.log(e.target.value);
@@ -90,6 +89,9 @@ function FantasyDetail(props){
       <css.Button onClick={()=> onClickingDelete(fantasy.id)}>Delete Event</css.Button>
       <css.Button onClick={getPlayers}>Show Picks</css.Button>
     </>
+  }
+  const bodyStyle = {
+    backgroundColor: 'light-gray'
   }
 
   return (
