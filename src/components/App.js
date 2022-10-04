@@ -5,8 +5,10 @@ import SignIn from './SignIn';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const StyledWrapper = styled.section`
-  // background-color: red;
+text-color: 'white';
+  
 `;
 
 function App() {
@@ -16,10 +18,10 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/sign-in' element={<SignIn/>}/>
-          <Route path='/' element={<FantasyControl/>}/>       
-        </Routes>
+          <Route path='/' element={<FantasyControl/>}/>     
+        </Routes> 
       </Router>
-    </StyledWrapper>
+    </StyledWrapper>  
   );
 }
 

@@ -108,17 +108,17 @@ function FantasyControl() {
     //   buttonText = "Return to Fantasy List";
     } else if (editing) {      
       currentlyVisibleState = <EditFantasyForm fantasy={selectedFantasy} onEditFantasy={handleEditingFantasyInList} />
-      buttonText = "Return to Fantasy List";
+      buttonText = "Return to Event List";
     } else if (selectedFantasy != null) {
       currentlyVisibleState= <FantasyDetail
       fantasy={selectedFantasy} 
       onClickingDelete={handleDeletingFantasy}
       onClickingEdit = {handleEditClick} 
       onNewPlayerCreation = {handleAddingNewPlayerToList} />
-      buttonText = "Return to Fantasy List";
+      buttonText = "Return to Event List";
     } else if (formVisibleOnPage) {
       currentlyVisibleState = <NewFantasyForm onNewFantasyCreation={handleAddingNewFantasyToList}/>;
-      buttonText = "Return to Fantasy List"; 
+      buttonText = "Return to Event List"; 
     } else if (viewMyFantasyList){
       currentlyVisibleState = <MyFantasyList onFantasySelection={handleChangingSelectedFantasy} FantasyList={mainFantasyList} changeVisibleList={handleChangingFantasyList}/>;
       buttonText = "Add Event";

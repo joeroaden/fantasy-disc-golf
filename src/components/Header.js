@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Logo from '../img/Logo.png';
+import grass from '../img/grass.png';
 
 const FantasyHeader = styled.h1`
   margin: 10px; 
   font-size: 50px;
-  color: white;
+  text-color: white;
   // background-color: teal;
 `;
 
@@ -24,10 +25,10 @@ function Header() {
     <React.Fragment>
       <StyledWrapper>
       <FantasyHeader>
-        <img src={Logo} alt='fantasty disc golf logo'/>
+        <img src={Logo} width='750px'alt='fantasty disc golf logo'/>
       </FantasyHeader>
-        <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link></p>
-      </StyledWrapper>
+        <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link> | <Link to="/sign-in">Contact</Link></p>
+      </StyledWrapper> 
     </React.Fragment>
   );
 }
