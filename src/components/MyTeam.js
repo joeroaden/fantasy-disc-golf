@@ -21,7 +21,6 @@ function MyTeam(props){
       <div style={mainStyle}>
         <div style={textStyle}>
       <h1>{props.player.name}</h1>
-      <br></br>
       <ol>
         <li>{props.player.player1}</li>
         <br></br>

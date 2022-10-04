@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Logo from '../img/Logo.png';
-import grass from '../img/grass.png';
 
 const FantasyHeader = styled.h1`
   margin: 10px; 

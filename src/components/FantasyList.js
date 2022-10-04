@@ -15,9 +15,16 @@ import * as css from '../StyleComponents'
 
 function FantasyList(props){
 
+  const eventList ={
+    family: "Roboto",
+    fontSize: 'larger'
+    
+  }
+
   return(
     <React.Fragment>
       <hr/>
+      <div style ={eventList}>
       {props.fantasyList.map((fantasy) =>
         <Fantasy 
           whenFantasyClicked={props.onFantasySelection}
@@ -28,6 +35,7 @@ function FantasyList(props){
           id={fantasy.id}
           key={fantasy.id}/>
       )}
+      </div>
       <css.Button onClick={props.changeVisibleList}>View My Picks</css.Button>
     </React.Fragment>
   );

@@ -4,8 +4,8 @@ export const Button = styled.button`
   font-weight: bolder; 
   background-color: HEX #FBFAF5;
   border-radius: 6px;
-  border: 3px solid palevioletred;
-  color: palevioletred;
+  border: 3px solid red;
+  color: red;
   margin: 0 1em;
   padding: 0.25em 1em;
 `

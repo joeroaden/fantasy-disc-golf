@@ -7,6 +7,9 @@ import * as css from '../StyleComponents';
 function MyFantasyList(props) {
   const myFantasyList = props.fantasyList.filter(fantasy => auth.currentUser.email === fantasy.creator);
 
+  
+
+
   return(
     <React.Fragment>
       <hr/>

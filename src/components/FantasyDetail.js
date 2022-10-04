@@ -64,8 +64,7 @@ function FantasyDetail(props){
     setPlayerList(newPlayerList);
     console.log(playerList);
   }
-  let player1 = null;
-
+  
   function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
     // console.log({player1})
