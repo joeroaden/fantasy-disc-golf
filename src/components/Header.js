@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import Logo from '../img/Logo.png';
 
 const FantasyHeader = styled.h1`
   margin: 10px; 
@@ -10,7 +11,7 @@ const FantasyHeader = styled.h1`
 `;
 
 const StyledWrapper = styled.section`
-  background-color: rgb(0,204,102);
+  background-color: white;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@ function Header() {
     <React.Fragment>
       <StyledWrapper>
       <FantasyHeader>
-        FANTASY DISC GOLF
+        <img src={Logo} alt='fantasty disc golf logo'/>
       </FantasyHeader>
         <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link></p>
       </StyledWrapper>
