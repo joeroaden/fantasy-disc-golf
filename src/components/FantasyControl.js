@@ -6,7 +6,7 @@ import NewFantasyForm from "./NewFantasyForm";
 import FantasyDetail from "./FantasyDetail";
 import EditFantasyForm from "./EditFantasyForm.js";
 import MyFantasyList from "./MyFantasyList.js";
-// import MyTeam from "./MyTeam.js"; 
+import MyTeam from "./MyTeam.js"; 
 import * as css from '../StyleComponents'
 
 function FantasyControl() {
@@ -103,9 +103,9 @@ function FantasyControl() {
     
     if (error) {
       currentlyVisibleState = <p>There was an error: {error}</p>
-    // } else if (currentAnswer != null){
-    //   currentlyVisibleState = <AnswerKey answer={currentAnswer} Fantasy={selectedFantasy} />;
-    //   buttonText = "Return to Fantasy List";
+    } else if (currentPlayer != null){
+      currentlyVisibleState = <MyTeam player={currentPlayer} Fantasy={selectedFantasy} />;
+      buttonText = "Return to Event List";
     } else if (editing) {      
       currentlyVisibleState = <EditFantasyForm fantasy={selectedFantasy} onEditFantasy={handleEditingFantasyInList} />
       buttonText = "Return to Event List";

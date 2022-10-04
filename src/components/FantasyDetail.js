@@ -64,18 +64,17 @@ function FantasyDetail(props){
     setPlayerList(newPlayerList);
     console.log(playerList);
   }
-  let player1 = null;
+  // let player1 = null;
 
   function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
-    console.log({player1})
+    // console.log({player1})
     props.onNewPlayerCreation({
-      player1: event.target.player1.value,
-      player2: event.target.player1.value,
-      player3: event.target.player1.value,
-      player4: event.target.player1.value,
-      player5: event.target.player1.value,
-      // setOptionValue(event.target.value);
+      player1: {optionValue},
+      player2: {optionValue2},
+      player3: {optionValue3},
+      player4: {optionValue4},
+      player5: {optionValue5},
       fantasyId: fantasy.id
     });
   }
