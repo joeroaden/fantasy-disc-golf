@@ -599,7 +599,7 @@ function FantasyDetail(props){
         <Option value="Ilkin Groh	-	990" />
         <Option value="Brandon Holsworth	-	990" />
       </Dropdown>
-      <p>You selected :
+      <p>You selected:
       <br></br>
       {optionValue} 
       <br></br>

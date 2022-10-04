@@ -10,7 +10,10 @@ function MyTeam(props){
   }
 
   const textStyle={
-    fontColor: 'white'
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 'larger'
+
   }
 
   return (
@@ -18,14 +21,23 @@ function MyTeam(props){
       <div style={mainStyle}>
         <div style={textStyle}>
       <h1>{props.player.name}</h1>
-      
+      <br></br>
       <ol>
         <li>{props.player.player1}</li>
+        <br></br>
         <li>{props.player.player2}</li>
+        <br></br>
         <li>{props.player.player3}</li>
+        <br></br>
         <li>{props.player.player4}</li>
+        <br></br>
         <li>{props.player.player5}</li>
+        <br></br>
       </ol>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       </div>
       </div>
     </React.Fragment>
