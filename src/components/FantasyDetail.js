@@ -15,7 +15,9 @@ function FantasyDetail(props){
   const [optionValue4, setOptionValue4] = useState("");
   const [optionValue5, setOptionValue5] = useState("");
 
-
+  const bodyStyle = {
+    backgroundColor: 'light-gray'
+  }
 
   const handleSelect = (e) => {
     console.log(e.target.value);
@@ -92,6 +94,7 @@ function FantasyDetail(props){
 
   return (
     <React.Fragment>
+      <div style={bodyStyle}>
       <h1>{fantasy.name}</h1>
       <a href="https://www.pdga.com/tour/event/55454">PDGA Event Page</a>
       <form onSubmit={handleNewPlayerFormSubmission}>
@@ -611,6 +614,9 @@ function FantasyDetail(props){
       {optionValue5} </p>
       <css.Button type='submit'>Submit your Team!</css.Button>
       </form>
+      <br></br>
+      </div>
+      <br></br>
       {/* {answerList} */}
       {showButtons}
     </React.Fragment>
