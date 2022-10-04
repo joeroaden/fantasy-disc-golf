@@ -11,7 +11,7 @@ The goal of this project is to provide more reasons to watch live disc golf and 
 - Click on event to see details (Date, Time and Location, How to watch etc)
 - See list of players for Men and Women playing each event
 - Create your own team name
-- Add each desired player to your roster - 5 men and 5 women - 10 total
+- Add each desired player to your roster - 5 men or 5 women
 - View your selected players for that week
 
 
