@@ -4,18 +4,17 @@ import styled from 'styled-components';
 import Logo from '../img/Logo.png';
 
 const FantasyHeader = styled.h1`
-  margin: 10px; 
   font-size: 50px;
   text-color: white;
-  // background-color: teal;
+  background-color: lightgray;
 `;
 
 const StyledWrapper = styled.section`
-  background-color: white;
+  background-color: lightgray;
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   text-align: center;
 `;
 

@@ -7,8 +7,8 @@ function Fantasy(props){
   <React.Fragment>
       <div onClick = {() => props.whenFantasyClicked(props.id)}>
         <h1>{props.name}</h1>
-        <h2>{props.location}</h2>
-        <h3>{props.date}</h3>
+        <h4>{props.location}</h4>
+        <h5>{props.date}</h5>
         <hr/>
       </div>
     </React.Fragment>

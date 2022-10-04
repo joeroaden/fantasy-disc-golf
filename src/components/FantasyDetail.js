@@ -91,7 +91,9 @@ function FantasyDetail(props){
     </>
   }
   const bodyStyle = {
-    backgroundColor: 'light-gray'
+    backgroundColor: 'lightgray',
+    fontSize: 'larger',
+    fontWeight: "bold"
   }
 
   return (

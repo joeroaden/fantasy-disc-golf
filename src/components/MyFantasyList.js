@@ -12,7 +12,6 @@ function MyFantasyList(props) {
 
   return(
     <React.Fragment>
-      <hr/>
       {myFantasyList.map((fantasy) => 
         <Fantasy 
           whenFantasyClicked={props.onFantasySelection}
