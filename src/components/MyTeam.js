@@ -1,17 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import background from '../img/grass.png';
 
 
 function MyTeam(props){
+  const mainStyle={
+    backgroundImage: `url(${background})`,
+
+  }
+
+  const textStyle={
+    fontColor: 'white'
+  }
 
   return (
     <React.Fragment>
+      <div style={mainStyle}>
+        <div style={textStyle}>
       <h1>{props.player.name}</h1>
-      <div>
-        {/* {props.players.map((player) => (
-        [{player.}]   */}
-        {/* ))} */}
-      </div>
+      
       <ol>
         <li>{props.player.player1}</li>
         <li>{props.player.player2}</li>
@@ -19,6 +26,8 @@ function MyTeam(props){
         <li>{props.player.player4}</li>
         <li>{props.player.player5}</li>
       </ol>
+      </div>
+      </div>
     </React.Fragment>
   );
 }

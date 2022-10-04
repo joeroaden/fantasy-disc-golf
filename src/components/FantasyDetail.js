@@ -101,7 +101,7 @@ function FantasyDetail(props){
           type='text'
           name='name'
           height='100px'
-          placeholder='Team Name' />   
+          placeholder='Your Team Name' />   
           <br></br>
           <br></br>
           <br></br>
