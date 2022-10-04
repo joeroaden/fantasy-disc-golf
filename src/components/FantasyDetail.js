@@ -70,11 +70,11 @@ function FantasyDetail(props){
     event.preventDefault();
     // console.log({player1})
     props.onNewPlayerCreation({
-      player1: {optionValue},
-      player2: {optionValue2},
-      player3: {optionValue3},
-      player4: {optionValue4},
-      player5: {optionValue5},
+      player1: optionValue,
+      player2: optionValue2,
+      player3: optionValue3,
+      player4: optionValue4,
+      player5: optionValue5,
       fantasyId: fantasy.id
     });
     console.log(optionValue)
