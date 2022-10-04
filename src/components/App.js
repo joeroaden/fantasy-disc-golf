@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 
 const StyledWrapper = styled.section`
-text-color: 'white';
+// text-color: 'white';
   
 `;
 

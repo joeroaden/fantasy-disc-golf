@@ -64,7 +64,7 @@ function FantasyDetail(props){
     setPlayerList(newPlayerList);
     console.log(playerList);
   }
-  // let player1 = null;
+  let player1 = null;
 
   function handleNewPlayerFormSubmission(event) {
     event.preventDefault();
@@ -77,7 +77,9 @@ function FantasyDetail(props){
       player5: {optionValue5},
       fantasyId: fantasy.id
     });
+    console.log(optionValue)
   }
+  
 
   if(auth.currentUser.email === fantasy.creator){
     showButtons = 
