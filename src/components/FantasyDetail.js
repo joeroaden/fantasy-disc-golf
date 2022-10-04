@@ -70,6 +70,7 @@ function FantasyDetail(props){
     event.preventDefault();
     // console.log({player1})
     props.onNewPlayerCreation({
+      name: event.target.name.value,
       player1: optionValue,
       player2: optionValue2,
       player3: optionValue3,
@@ -95,6 +96,15 @@ function FantasyDetail(props){
       <h1>{fantasy.name}</h1>
       <a href="https://www.pdga.com/tour/event/55454">PDGA Event Page</a>
       <form onSubmit={handleNewPlayerFormSubmission}>
+        <br></br>
+      <input
+          type='text'
+          name='name'
+          height='100px'
+          placeholder='Team Name' />   
+          <br></br>
+          <br></br>
+          <br></br>
       <Dropdown
         formLabel="Choose Player 1"
         name="player1"

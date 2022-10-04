@@ -6,7 +6,7 @@ function MyTeam(props){
 
   return (
     <React.Fragment>
-      <h1>Your Team</h1>
+      <h1>{props.player.name}</h1>
       <div>
         {/* {props.players.map((player) => (
         [{player.}]   */}
