@@ -16,7 +16,6 @@ import * as css from '../StyleComponents'
 function FantasyList(props){
 
   const eventList ={
-    family: "Roboto",
     backgroundColor: "lightgray",
     fontSize: "larger",
     fontWeight: "bold"

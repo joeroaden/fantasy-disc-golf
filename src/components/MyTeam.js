@@ -30,7 +30,7 @@ function MyTeam(props){
         <br></br>
         <li>{props.player.player4}</li>
         <br></br>
-        <li>{props.player.player5}</li>
+        <li>Wildcard: {props.player.player5}</li>
         <br></br>
       </ol>
       <br></br>
