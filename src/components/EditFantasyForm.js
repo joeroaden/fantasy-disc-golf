@@ -20,7 +20,7 @@ function EditFantasyForm(props){
   return (
     <React.Fragment>
       <ReusableForm formSubmissionHandler={handleEditFantasyFormSubmission}
-       buttonText={"Edit Fantasy"}/>
+       buttonText={"Edit Event"}/>
     </React.Fragment>
   );
 }
