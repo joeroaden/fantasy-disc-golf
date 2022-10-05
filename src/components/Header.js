@@ -25,7 +25,7 @@ function Header() {
       <FantasyHeader>
         <img src={Logo} width='750px'alt='fantasty disc golf logo'/>
       </FantasyHeader>
-        <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link> | <Link to="/sign-in">Contact</Link></p>
+        <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link> | <Link to="/rules">Rules</Link></p>
       </StyledWrapper> 
     </React.Fragment>
   );
