@@ -508,7 +508,7 @@ function FantasyDetail(props){
       </Dropdown>
       <hr></hr>
       <Dropdown
-        formLabel="Choose Player 5"
+        formLabel="Choose Player 5 - Note this is the wildcard player that will average most above their rating"
         name="player5"
         // buttonText="Select Player"
         onChange={handleSelect5}

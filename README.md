@@ -2,10 +2,12 @@
 
 #### By _Joe Roaden_
 
-#### _A Fantasy Sports REACT application that allows a user to sign in via Firestore to sign up for an account.  Then create, delete and update Disc Golf Events that are stored within Firebase. A user can then click on an event and create their own team including Team name and select 5 players.  Once a user has submitted their team they are taken to their Team Home Page._
+#### _A Fantasy Sports REACT application that allows a user to sign in via Firestore to sign up for an account.  Then create, delete and update Disc Golf Events that are stored within Firebase. A user can then click on an event and create their own team including Team name and select 5 players the 5th of which is the wildcard player, the player you believe will finish well but also average above their rating.  Once a user has submitted their team they are taken to their Team Home Page._
 
 
 ![image logo](screen-shot-logo.png)
+
+
 
 ---
 ## Table of Contents
@@ -32,110 +34,7 @@
 ---
 ## Description
 
-_The user can add a new quiz, providing answers at the time of creation.  A list of all quizzes is displayed once a new user has created an account.  The user can then view their list of quizzes from a dashboard view and also take other users quizzes.  A user has full CRUD functionality for all quizzes they create. When taking a new quiz, a user can also view the answer key to quickly compare their answers to the key_
-
----
-## Setup and Installation Requirements
-
-<details>
-<summary><strong>Initial Setup</strong></summary>  
-
-1. Copy the git repository url: https://github.com/joeroaden/quiz-of-choice
-2. Open a shell program and navigate to your desktop.
-3. Clone the repository for this project using the `git clone` command and including the copied URL.
-4. While still in the shell program, navigate to the root directory of the newly created file named `quiz-of-choice`.
-5. From the root directory, run `npm install` to install all modules that are listed on package. json file and their dependencies
-6. From the root directory, run `npm run start` to view the application on your local live server.
-
-
----
-## Known Bugs
-
-* _There are no known bugs at this time_
-
----
-## License
-
-
-
-[Copyright](/LICENSE) © 2022 Joe Roaden
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-
-
+_The goal of this project is to provide more reasons to watch live disc golf and get more enjoyment out of a tournament even when the top few positions are already locked in going into the final round.  Fantasy disc golf will allow users to compete against each other for points each week by selecting their top 5 players for men and women at each disc golf event. The disc golf pro tour has regular events each month and also silver series events nearly every weekend.  The initial goal is to have each week be its own event so anyone can jump in and play anytime.  Stretch goals will allow users to establish their own leagues each week or compete in the general pool among all users._
 
 ## Scoring System Explained
 1. Salary Cap - every week each player has salary cap of 10k to select players based on rating
@@ -246,4 +145,103 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 |98	|-230	|-250|
 |99	|-240	|-250|
 |100	|-250	|-250|
+
+---
+## Setup and Installation Requirements
+
+<details>
+<summary><strong>Initial Setup</strong></summary>  
+
+1. Copy the git repository url: https://github.com/joeroaden/fantasy-disc-golf
+2. Open a shell program and navigate to your desktop.
+3. Clone the repository for this project using the `git clone` command and including the copied URL.
+4. While still in the shell program, navigate to the root directory of the newly created file named `fantasy-disc-golf`.
+5. From the root directory, run `npm install` to install all modules that are listed on package. json file and their dependencies
+6. From the root directory, run `npm run start` to view the application on your local live server.
+
+
+---
+## Known Bugs
+
+* _There are no known bugs at this time_
+
+---
+## License
+
+
+
+[Copyright](/LICENSE) © 2022 Joe Roaden
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
 
