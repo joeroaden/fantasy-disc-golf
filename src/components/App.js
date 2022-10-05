@@ -5,6 +5,7 @@ import SignIn from './SignIn';
 import Rules from './Rules'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
+import Announcements from './Announcements';
 
 
 
@@ -25,6 +26,8 @@ function App() {
         <Routes>
           <Route path='/sign-in' element={<SignIn/>}/>
           <Route path='/rules' element={<Rules/>}/>
+          <Route path='/announcements' element={<Announcements/>}/>
+
           <Route path='/' element={<FantasyControl/>}/>     
         </Routes> 
         </div>
