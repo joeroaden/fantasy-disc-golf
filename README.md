@@ -38,7 +38,7 @@ _The goal of this project is to provide more reasons to watch live disc golf and
 
 ## Scoring System Explained
 1. Salary Cap - every week each player has salary cap of 10k to select players based on rating
-2. Choose your top 4 for MPO and FPO and 1 wild card each - wild card will be player you believe to play most above their *rating - *points above rating will be added to overall score along with additional points
+2. Choose your top 4 for MPO and FPO and 1 wild card each - wild card will be the player you believe to play most above their *rating - *points above rating will be added to overall score along with additional points
 3. Players will accumulate points based on where they finish regardless of order - except wild card - this is the player you believe will finish well but also farther above their rating
 
 
