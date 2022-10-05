@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from '../img/Logo.png';
 
 const FantasyHeader = styled.h1`
-  font-size: 50px;
+  font-size: 40px;
   text-color: white;
   background-color: lightgray;
 `;
@@ -23,7 +23,7 @@ function Header() {
     <React.Fragment>
       <StyledWrapper>
       <FantasyHeader>
-        <img src={Logo} width='750px'alt='fantasty disc golf logo'/>
+        <img src={Logo} width='700px'alt='fantasty disc golf logo'/>
       </FantasyHeader>
         <p><Link to="/">Home</Link> | <Link to="/sign-in">Account</Link> | <Link to="/rules">Rules</Link></p>
       </StyledWrapper> 
