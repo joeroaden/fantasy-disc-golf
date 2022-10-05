@@ -20,7 +20,7 @@ function MyTeam(props){
     <React.Fragment>
       <div style={mainStyle}>
         <div style={textStyle}>
-      <h1>{props.player.name}</h1>
+      <h1>Team: {props.player.name}</h1>
       <ol>
         <li>{props.player.player1}</li>
         <br></br>
