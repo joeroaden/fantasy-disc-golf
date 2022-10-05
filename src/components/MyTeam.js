@@ -21,6 +21,7 @@ function MyTeam(props){
       <div style={mainStyle}>
         <div style={textStyle}>
       <h1>Team: {props.player.name}</h1>
+      <h3>Your Picks:</h3>
       <ol>
         <li>{props.player.player1}</li>
         <br></br>

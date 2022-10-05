@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from '../img/Logo.png';
 
 const FantasyHeader = styled.h1`
-  font-size: 40px;
+  font-size: 30px;
   text-color: white;
   background-color: lightgray;
 `;
