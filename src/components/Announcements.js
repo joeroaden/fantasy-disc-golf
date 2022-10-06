@@ -18,7 +18,8 @@ function Announcements(){
     <React.Fragment>
       <div style={mainStyle}>
         <div style={textStyle}>
-          <h1>Announcements go here!</h1>
+          <h1>Announcements</h1>
+          <p>There are no new announcements to share at this time, but thank you for stopping by and stay tuned for more updates!</p>
       </div>
       </div>
     </React.Fragment>
