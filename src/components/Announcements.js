@@ -20,7 +20,11 @@ function Announcements(){
       <div style={mainStyle}>
         <div style={textStyle}>
           <h1>Announcements</h1>
-          <p>There are no new announcements to share at this time, but thank you for stopping by and stay tuned for more updates!</p>
+          <h3>There are no new announcements to share at this time, but thank you for stopping by and stay tuned for more updates!</h3>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
       </div>
       </div>
     </React.Fragment>
