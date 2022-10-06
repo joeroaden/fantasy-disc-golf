@@ -23,7 +23,7 @@ return (
     <h1>Goal</h1>
     <p>The goal of this project is to provide more reasons to watch live disc golf and get more enjoyment out of a tournament even when the top few positions are already locked in going into the final round.</p>
     <h1>Rules & Scoring </h1>
-    <p>1. Salary Cap - every week each team has a salary cap of 10k to select players based on rating</p>
+    <p>1. Salary Cap - every week each team has a salary cap of 10k to select players based on rating </p>
     <p>2. Choose your top 4 for Men and Women and 1 wild card each - wild card will be the player you believe to play most above their *rating - *points above rating will be added to overall score along with additional points</p>
     <p>3. Players will accumulate points based on where they finish regardless of order - except wild card - this is the player you believe will finish well but also farther above their rating</p>
     <h1>Scoring System - Points</h1>
