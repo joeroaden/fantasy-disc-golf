@@ -20,7 +20,7 @@ function Announcements(){
       <div style={mainStyle}>
         <div style={textStyle}>
           <h1>Announcements</h1>
-          <h3>There are no new announcements to share at this time, but thank you for stopping by and stay tuned for more updates!</h3>
+          <h3>There are no announcements to share at this time, but thank you for stopping by and stay tuned for more updates!</h3>
           <br></br>
           <br></br>
           <br></br>
