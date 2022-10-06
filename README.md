@@ -2,7 +2,7 @@
 
 #### By _Joe Roaden_
 
-#### _A Fantasy Sports REACT application that allows a user to sign in via Firestore to sign up for an account.  Then create, delete and update Disc Golf Events that are stored within Firebase. A user can then click on an event and create their own team including Team name and select 5 players the 5th of which is the wildcard player, the player you believe will finish well but also average above their rating.  Once a user has submitted their team they are taken to their Team Home Page._
+#### _A Fantasy Sports REACT application that allows a user to sign in via Firestore to sign up for an account.  Then create, delete and update Disc Golf Events that are stored within Firebase. A user can then click on an event and create their own team including Team name and select 5 players the 5th of which is the wildcard player, the player you believe will place well but also average above their rating.  Once a user has submitted their team they are taken to their Team Home Page._
 
 
 ![image logo](screen-shot-logo.png)
