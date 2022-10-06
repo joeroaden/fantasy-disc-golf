@@ -9,6 +9,7 @@ function Announcements(){
 
   const textStyle={
     color: 'white',
+    fontFamily: 'Helvetica',
     fontWeight: 'bold',
     fontSize: 'larger'
 
