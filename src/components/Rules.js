@@ -536,7 +536,6 @@ return (
         </tr>
       </table>
       </div>
-
     </div>
       </div>
   </React.Fragment>
